@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLeaf, faGoogle, faApple } from '@fortawesome/free-brands-svg-icons';
+import { faGoogle, faApple } from '@fortawesome/free-brands-svg-icons';
+import { faLeaf } from '@fortawesome/free-solid-svg-icons';
 import Button from '../../components/ui/Button';
 
 const Login = () => {
