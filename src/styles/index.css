@@ -1,0 +1,497 @@
+:root {
+  --primary-color: #4CAF50;
+  --secondary-color: #FFA000;
+  --background-color: #F5F5F5;
+  --text-color: #333333;
+  --light-text: #FFFFFF;
+  --border-color: #DDDDDD;
+  --success-color: #4CAF50;
+  --warning-color: #FFC107;
+  --error-color: #F44336;
+  --shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Styles pour le header */
+header {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  padding: 15px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: var(--shadow);
+}
+
+/* Styles pour la barre de navigation */
+nav {
+  background-color: var(--light-text);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.nav-item i {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.nav-item.active {
+  color: var(--primary-color);
+}
+
+/* Styles pour le contenu principal */
+main {
+  padding: 70px 15px 80px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Styles pour les cartes */
+.card {
+  background-color: var(--light-text);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 150px;
+  background-color: #DDD;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.card-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  background-color: #f9f9f9;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Styles pour les boutons */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  border: none;
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: var(--light-text);
+  border: none;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+/* Styles pour les formulaires */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+/* Styles pour les badges */
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.badge-success {
+  background-color: var(--success-color);
+  color: var(--light-text);
+}
+
+.badge-warning {
+  background-color: var(--warning-color);
+  color: var(--text-color);
+}
+
+/* Styles pour la carte */
+.map-container {
+  width: 100%;
+  height: 300px;
+  background-color: #E0E0E0;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #E0E0E0;
+  color: #666;
+  font-style: italic;
+}
+
+/* Styles pour les filtres */
+.filter-bar {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px 0;
+  margin-bottom: 15px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.filter-item {
+  flex: 0 0 auto;
+  padding: 8px 15px;
+  margin-right: 10px;
+  background-color: var(--light-text);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  font-size: 14px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.filter-item.active {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  border-color: var(--primary-color);
+}
+
+/* Styles pour le splash screen */
+.splash-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  text-align: center;
+}
+
+.splash-logo {
+  width: 150px;
+  height: 150px;
+  background-color: var(--light-text);
+  border-radius: 75px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.splash-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.splash-subtitle {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* Styles pour les écrans de connexion et inscription */
+.auth-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.auth-logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.auth-tabs {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.auth-tab {
+  flex: 1;
+  text-align: center;
+  padding: 15px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.auth-tab.active {
+  background-color: var(--light-text);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.auth-form {
+  background-color: var(--light-text);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.auth-footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* Styles pour le profil utilisateur */
+.profile-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #DDD;
+  margin: 0 auto 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  color: #999;
+}
+
+.profile-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.profile-email {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.profile-section {
+  margin-bottom: 20px;
+}
+
+.profile-section-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Styles pour les détails de ferme et d'annonce */
+.detail-header {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.detail-image {
+  width: 100%;
+  height: 200px;
+  background-color: #DDD;
+  background-size: cover;
+  background-position: center;
+}
+
+.detail-back {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.detail-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.detail-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.detail-info {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.detail-info-item {
+  flex: 0 0 50%;
+  margin-bottom: 10px;
+}
+
+.detail-info-label {
+  font-size: 12px;
+  color: #666;
+}
+
+.detail-info-value {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.detail-description {
+  margin-bottom: 20px;
+}
+
+.detail-section {
+  margin-bottom: 20px;
+}
+
+.detail-section-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Styles pour la création d'annonce */
+.create-form {
+  background-color: var(--light-text);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.photo-upload {
+  width: 100%;
+  height: 150px;
+  background-color: #f1f1f1;
+  border: 2px dashed #ccc;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.photo-upload i {
+  font-size: 48px;
+  color: #999;
+}
+
+.checkbox-group {
+  margin-bottom: 15px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox-input {
+  margin-right: 10px;
+}
